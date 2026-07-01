@@ -1,15 +1,16 @@
 from collections import deque
-MIN_CLUSTER_SIZE = 5
+import numpy as np
+MIN_CLUSTER_SIZE = 20
 
 COLORS = [
-    (1,0,0),      # Red
-    (0,1,0),      # Green
-    (0,0,1),      # Blue
-    (1,1,0),      # Yellow
-    (1,0,1),      # Magenta
-    (0,1,1),      # Cyan
-    (1,0.5,0),    # Orange
-    (0.5,0,1),    # Violet
+    (1.0,0.0,0.0),      # Red
+    (0.0,1.0,0.0),      # Green
+    (0.0,0.0,1.0),      # Blue
+    (1.0,1.0,0.0),      # Yellow
+    (1.0,0.0,1.0),      # Magenta
+    (0.0,1.0,1.0),      # Cyan
+    (1.0,0.5,0.0),    # Orange
+    (0.5,0.0,1.0),    # Violet
 ]
 
 class FrontierCluster:
@@ -19,7 +20,7 @@ class FrontierCluster:
         self.centroid = (sum(r for r,c in cells)/len(cells),sum(c for r,c in cells)/len(cells))
         self.size = len(cells)
         self.r , self.g , self.b = COLORS[id%len(COLORS)]
-
+        self.nearest_point = min(self.cells,key=lambda p:((p[0]-self.centroid[0])**2+(p[1]-self.centroid[1])**2) ) 
 
 class cluster:
     def __init__(self,height,width,frontier_mask):
@@ -53,5 +54,3 @@ class cluster:
                         self.frontier[self.cluster_id] = frontier_cluster
                         self.cluster_id += 1
         return self.frontier
-
-        

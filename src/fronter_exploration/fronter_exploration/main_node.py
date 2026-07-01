@@ -3,7 +3,11 @@ import numpy as np
 from rclpy.node import Node
 from fronter_exploration.detector import detector
 from fronter_exploration.cluster import cluster, FrontierCluster
+from fronter_exploration.visualization import visulatization
+from fronter_exploration.utils import utils
 from nav_msgs.msg import OccupancyGrid
+from visualization_msgs.msg import MarkerArray
+
 
 class main_node(Node):
     def __init__(self):
@@ -12,7 +16,8 @@ class main_node(Node):
         self.subscriber = self.create_subscription(OccupancyGrid, "map", self.mapCallback, 10)
         self.get_logger().info("Main node started")
         self.frontier_pub = self.create_publisher(OccupancyGrid, "frontier_map", 10)
-    
+        self.marker_pub = self.create_publisher(MarkerArray, "frontier_markers", 10)
+
     def mapCallback(self, msg):
         self.map = msg
         self.grid = np.array(msg.data).reshape((msg.info.height, msg.info.width))
@@ -23,19 +28,11 @@ class main_node(Node):
         self.frontier_mask = det.find_frontiers()
         clus = cluster(self.height,self.width,self.frontier_mask)
         self.frontier = clus.clustering()
-        frontier_msg = OccupancyGrid()
-        frontier_msg.header = msg.header
-        frontier_msg.info = msg.info
-        frontier_msg.data = []
-        for value in self.frontier_mask.flatten():
-            if value == 1:
-                frontier_msg.data.append(100)
-            else:
-                frontier_msg.data.append(0)
-        self.frontier_pub.publish(frontier_msg)
+        until = utils(self.map.info.origin.position.x,self.map.info.origin.position.y,self.map.info.resolution)
+        visual = visulatization(msg,until)
+        visual.frontier_msg(self.frontier_mask,self.frontier_pub)
+        visual.frontier_visual(self.marker_pub,self.frontier,self.get_clock())
 
-        marker.header.frame_id = "map"
-        marker.header.stamp = self.get_clock.now().to_msg()
         
 
 
