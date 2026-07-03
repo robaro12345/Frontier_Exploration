@@ -1,5 +1,6 @@
 from collections import deque
 import numpy as np
+import math
 MIN_CLUSTER_SIZE = 20
 
 COLORS = [
@@ -21,6 +22,9 @@ class FrontierCluster:
         self.size = len(cells)
         self.r , self.g , self.b = COLORS[id%len(COLORS)]
         self.nearest_point = min(self.cells,key=lambda p:((p[0]-self.centroid[0])**2+(p[1]-self.centroid[1])**2) ) 
+        self.path_cost = None
+        self.information_gain = None
+        self.score = None
 
 class cluster:
     def __init__(self,height,width,frontier_mask):
@@ -54,3 +58,10 @@ class cluster:
                         self.frontier[self.cluster_id] = frontier_cluster
                         self.cluster_id += 1
         return self.frontier
+
+    def estimation(self,robot_pos,until):
+        grid_robot_pos = until.world_to_grid(robot_pos[0],robot_pos[1])
+        for _,cluster in self.frontier.items():
+            cluster.path_cost = math.sqrt((cluster.nearest_point[0]-grid_robot_pos[0])**2+(cluster.nearest_point[1]-grid_robot_pos[1])**2)
+            cluster.information_gain = cluster.size
+            cluster.score = cluster.information_gain/cluster.path_cost
