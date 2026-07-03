@@ -24,7 +24,6 @@ class nav2_client:
         if not goal_handle.accepted:
             self.node.get_logger().warn("Goal rejected")
             self.node.is_navigating = False
-            self.node.goal_Failed = True
             return
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(self.result_callback)
@@ -33,3 +32,4 @@ class nav2_client:
         result = future.result().result
         self.node.get_logger().info("Goal reached")
         self.node.is_navigating = False
+        self.node.planner.path = {}

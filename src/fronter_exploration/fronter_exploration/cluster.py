@@ -59,9 +59,14 @@ class cluster:
                         self.cluster_id += 1
         return self.frontier
 
-    def estimation(self,robot_pos,until):
-        grid_robot_pos = until.world_to_grid(robot_pos[0],robot_pos[1])
+    def estimation(self,planner,node):
         for _,cluster in self.frontier.items():
-            cluster.path_cost = math.sqrt((cluster.nearest_point[0]-grid_robot_pos[0])**2+(cluster.nearest_point[1]-grid_robot_pos[1])**2)
-            cluster.information_gain = cluster.size
-            cluster.score = cluster.information_gain/cluster.path_cost
+            if planner.path is None:
+                self.frontier.pop(cluster.id)
+            else:
+                cluster.path_cost = planner.path_cost_calculator(cluster.id)
+                cluster.information_gain = cluster.size
+                if cluster.path_cost == 0:
+                    cluster.score = float('inf')
+                else:
+                    cluster.score = cluster.information_gain/cluster.path_cost
