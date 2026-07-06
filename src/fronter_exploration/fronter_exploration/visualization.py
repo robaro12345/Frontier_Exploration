@@ -3,7 +3,7 @@ from visualization_msgs.msg import MarkerArray, Marker
 from geometry_msgs.msg import Point
 
 
-class visulatization:
+class Visulatization:
     def __init__(self,map_msg,utilt):
         self.msg = map_msg
         self.utilt = utilt

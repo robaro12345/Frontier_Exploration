@@ -1,4 +1,4 @@
-class detector:
+class Detector:
     def __init__(self,height,width,grid,frontier_mask):
         self.height = height
         self.width = width

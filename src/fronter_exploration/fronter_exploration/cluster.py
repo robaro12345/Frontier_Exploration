@@ -1,17 +1,16 @@
-from collections import deque
 import numpy as np
-import math
+from collections import deque
 MIN_CLUSTER_SIZE = 20
 
 COLORS = [
-    (1.0,0.0,0.0),      # Red
-    (0.0,1.0,0.0),      # Green
-    (0.0,0.0,1.0),      # Blue
-    (1.0,1.0,0.0),      # Yellow
-    (1.0,0.0,1.0),      # Magenta
-    (0.0,1.0,1.0),      # Cyan
-    (1.0,0.5,0.0),    # Orange
-    (0.5,0.0,1.0),    # Violet
+    (1.0, 0.0, 0.0),      # Red
+    (0.0, 1.0, 0.0),      # Green
+    (0.0, 0.0, 1.0),      # Blue
+    (1.0, 1.0, 0.0),      # Yellow
+    (1.0, 0.0, 1.0),      # Magenta
+    (0.0, 1.0, 1.0),      # Cyan
+    (1.0, 0.5, 0.0),    # Orange
+    (0.5, 0.0, 1.0),    # Violet
 ]
 
 class FrontierCluster:
@@ -26,7 +25,7 @@ class FrontierCluster:
         self.information_gain = None
         self.score = None
 
-class cluster:
+class Cluster:
     def __init__(self,height,width,frontier_mask):
         self.height = height
         self.width = width
@@ -61,12 +60,11 @@ class cluster:
 
     def estimation(self,planner,node):
         for _,cluster in self.frontier.items():
-            if planner.path is None:
-                self.frontier.pop(cluster.id)
+            path = planner.path.get(cluster.id)
+            if path is None:
+                cluster.score = -float("inf")
+                continue
             else:
                 cluster.path_cost = planner.path_cost_calculator(cluster.id)
                 cluster.information_gain = cluster.size
-                if cluster.path_cost == 0:
-                    cluster.score = float('inf')
-                else:
-                    cluster.score = cluster.information_gain/cluster.path_cost
+                cluster.score = cluster.information_gain/cluster.path_cost

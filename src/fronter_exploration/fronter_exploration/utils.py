@@ -1,4 +1,4 @@
-class utils:
+class Utils:
     def __init__(self,origin_x,origin_y,resolution):
         self.origin_x = origin_x
         self.origin_y = origin_y

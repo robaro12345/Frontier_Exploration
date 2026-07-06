@@ -1,17 +1,16 @@
 import rclpy
 import numpy as np
 from rclpy.node import Node
-from fronter_exploration.detector import detector
-from fronter_exploration.cluster import cluster, FrontierCluster
-from fronter_exploration.visualization import visulatization
-from fronter_exploration.utils import utils
-from fronter_exploration.nav2_client import nav2_client
-from fronter_exploration.planner_client import planner
+from fronter_exploration.detector import Detector
+from fronter_exploration.cluster import Cluster, FrontierCluster
+from fronter_exploration.visualization import Visulatization
+from fronter_exploration.utils import Utils
+from fronter_exploration.nav2_client import Nav2Client
+from fronter_exploration.planner_client import Planner
 from nav_msgs.msg import OccupancyGrid
-import time
-from tf2_ros import Buffer, TransformListener,TransformException
+from collections import deque
 from visualization_msgs.msg import MarkerArray
-
+from fronter_exploration.state import State
 
 class main_node(Node):
     def __init__(self):
@@ -21,50 +20,55 @@ class main_node(Node):
         self.get_logger().info("Main node started")
         self.frontier_pub = self.create_publisher(OccupancyGrid, "frontier_map", 10)
         self.marker_pub = self.create_publisher(MarkerArray, "frontier_markers", 10)
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.nav = nav2_client(self)
-        self.planner = planner(self)
-        self.is_navigating = False
-        self.is_Planning = False
+        self.nav = Nav2Client(self)
+        self.planner = Planner(self)
+        self.request_queue = deque()
+        self.current_cluster = None
+        self.state = State.IDLE
+        self.best_node = None
 
-    def get_robot_pose(self):
-        try:
-            transform = self.tf_buffer.lookup_transform("map","base_link",rclpy.time.Time())
-            self.robot_pose = (transform.transform.translation.x,transform.transform.translation.y)
-            self.get_logger().info(f"Robot pose: {self.robot_pose}")
-        except TransformException as ex:
-            self.get_logger().info(f"TF lookup failed: {ex}")
+    def scoring(self,clus,utils):
+        clus.estimation(self.planner,self)
+        self.best_node = max(self.frontier.values(),key=lambda x:x.score)
+        self.get_logger().info(f"Best cluster: {self.best_node.id}, Color : {self.best_node.r},{self.best_node.g},{self.best_node.b}")
+        self.state = State.NAVIGATING
+        self.nav.goal(self.best_node.nearest_point[0],self.best_node.nearest_point[1],utils)
+
+    def send_to_queue(self,utils,clus):
+        if not self.request_queue:
+            self.scoring(clus,utils)
+            return
+        cluster = self.request_queue.popleft()
+        self.current_cluster = cluster
+        self.planner.cost_planner(self.current_cluster,utils,clus)
 
     def mapCallback(self, msg):
-        self.map = msg
-        self.grid = np.array(msg.data).reshape((msg.info.height, msg.info.width))
-        self.height = msg.info.height
-        self.width = msg.info.width
-        self.frontier_mask = np.zeros((self.height, self.width), dtype=np.int8)
-        det = detector(self.height,self.width,self.grid,self.frontier_mask)
-        self.frontier_mask = det.find_frontiers()
-        clus = cluster(self.height,self.width,self.frontier_mask)
-        self.frontier = clus.clustering()
-        until = utils(self.map.info.origin.position.x,self.map.info.origin.position.y,self.map.info.resolution)
-        visual = visulatization(msg,until)
-        visual.frontier_msg(self.frontier_mask,self.frontier_pub)
-        visual.frontier_visual(self.marker_pub,self.frontier,self.get_clock())
-        self.get_robot_pose()
-        for _, clust in self.frontier.items():
-            self.is_Planning = True
-            self.planner.cost_planner(clust,until)
-        if len(self.planner.path) == len(self.frontier):
-            self.is_Planning = False
-        if not self.is_Planning:
-            clus.estimation(self.planner,self)
-            best_cluster = max(self.frontier.values(),key=lambda x:x.score)
-            self.get_logger().debug(f"Best cluster: {best_cluster.id}, Color : {best_cluster.r},{best_cluster.g},{best_cluster.b}")
-            if not self.is_navigating:
-                self.is_navigating = True
-                self.nav.goal(best_cluster.nearest_point[0],best_cluster.nearest_point[1],until)
-        if self.frontier == {}:
-            exit(0)
+        if self.state==State.IDLE:
+            self.best_node = None
+            self.map = msg
+            self.grid = np.array(msg.data).reshape((msg.info.height, msg.info.width))
+            self.height = msg.info.height
+            self.width = msg.info.width
+            self.frontier_mask = np.zeros((self.height, self.width), dtype=np.int8)
+            map_util = Utils(self.map.info.origin.position.x,self.map.info.origin.position.y,self.map.info.resolution)
+            visual = Visulatization(msg,map_util)
+            detector = Detector(self.height,self.width,self.grid,self.frontier_mask)
+            cluster = Cluster(self.height,self.width,self.frontier_mask)
+            self.frontier_mask = detector.find_frontiers()
+            self.frontier = cluster.clustering()
+            if self.frontier == {}:
+                self.get_logger().info("All Done:")
+                self.nav.goal(0,0,map_util)
+                exit(0)
+            visual.frontier_msg(self.frontier_mask,self.frontier_pub)
+            visual.frontier_visual(self.marker_pub,self.frontier,self.get_clock())
+            self.state = State.PLANNING
+            self.request_queue.clear()
+            for clust in self.frontier.values():
+                self.request_queue.append(clust)
+            self.send_to_queue(map_util,cluster)
+            
+        
         
 
 

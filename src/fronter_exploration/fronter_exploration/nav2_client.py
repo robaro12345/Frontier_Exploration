@@ -1,7 +1,8 @@
 from rclpy.action import ActionClient
 from nav2_msgs.action import NavigateToPose
+from fronter_exploration.state import State
 
-class nav2_client:
+class Nav2Client:
     def __init__(self,node):
         self.node = node
         self.client = ActionClient(node,NavigateToPose,"navigate_to_pose")
@@ -23,7 +24,6 @@ class nav2_client:
         goal_handle = future.result()
         if not goal_handle.accepted:
             self.node.get_logger().warn("Goal rejected")
-            self.node.is_navigating = False
             return
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(self.result_callback)
@@ -31,5 +31,5 @@ class nav2_client:
     def result_callback(self, future):
         result = future.result().result
         self.node.get_logger().info("Goal reached")
-        self.node.is_navigating = False
+        self.node.state = State.IDLE
         self.node.planner.path = {}
