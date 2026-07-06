@@ -83,9 +83,9 @@ The `main_node` orchestrates the entire pipeline. It delegates frontier detectio
          ┌─────────────────────────────────────────┐
          │                                         │
          ▼                                         │
-┌──────────────┐   map received   ┌─────────────┐  │ goal reached
-│     IDLE     │ ──────────────► │   PLANNING  │  │
-└──────────────┘                 └─────────────┘  │
+┌──────────────┐   map received  ┌─────────────┐   │ goal reached
+│     IDLE     │ ──────────────► │   PLANNING  │   │
+└──────────────┘                 └─────────────┘   │
                                        │           │
                               paths computed       │
                                        │           │
