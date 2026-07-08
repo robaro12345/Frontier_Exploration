@@ -58,7 +58,8 @@ class main_node(Node):
             self.frontier = cluster.clustering()
             if self.frontier == {}:
                 self.get_logger().info("All Done:")
-                self.nav.goal(0,0,map_util)
+                return_goal = map_util.world_to_grid(0,0)
+                self.nav.goal(return_goal[0],return_goal[1],map_util)
                 exit(0)
             visual.frontier_msg(self.frontier_mask,self.frontier_pub)
             visual.frontier_visual(self.marker_pub,self.frontier,self.get_clock())
