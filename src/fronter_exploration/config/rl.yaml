@@ -1,0 +1,32 @@
+main_node:
+  ros__parameters:
+    rl: false
+    training: false
+    rl.learning_rate: 0.001
+    rl.gamma: 0.99
+    rl.epsilon_start: 1.0
+    rl.epsilon_min: 0.05
+    rl.epsilon_decay: 0.995
+    rl.replay_capacity: 10000
+    rl.batch_size: 64
+    rl.target_update: 100
+    rl.seed: 0
+    rl.reward_gain: 0.7
+    rl.reward_distance: 0.2
+    rl.reward_stagnation: 0.1
+    rl.reward_collision: 0.0
+    rl.stagnation_threshold: 0.05
+    rl.collision_enabled: false
+    rl.allow_untrained_checkpoint: false
+    rl.map_max_age: 5.0
+    rl.map_settle_time: 0.2
+    rl.map_wait_timeout: 30.0
+    rl.episode_limit: 1
+    rl.checkpoint_every: 50
+    rl.checkpoint_dir: ./checkpoints
+    rl.checkpoint: ''
+    rl.navigation_timeout: 300.0
+    rl.planner_timeout: 30.0
+    rl.frontier_goal_min_distance: 0.5
+    rl.unreachable_timeout: 60.0
+    rl.frontier_goal_attempts: 4

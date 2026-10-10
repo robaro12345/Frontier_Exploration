@@ -1,0 +1,8 @@
+{
+  "total_episodes": 128,
+  "completed_episodes": 105,
+  "mean_episode_reward": 106.70845229102812,
+  "success_rate": 0.8203125,
+  "mean_steps_per_episode": 23.078125,
+  "final_epsilon": 0.05
+}

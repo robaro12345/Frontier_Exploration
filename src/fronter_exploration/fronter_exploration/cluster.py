@@ -59,12 +59,12 @@ class Cluster:
         return self.frontier
 
     def estimation(self,planner,node):
-        for _,cluster in self.frontier.items():
+        for _,cluster in list(self.frontier.items()):
             path = planner.path.get(cluster.id)
             if path is None:
-                cluster.score = -float("inf")
+                self.frontier.pop(cluster.id)
                 continue
             else:
                 cluster.path_cost = planner.path_cost_calculator(cluster.id)
                 cluster.information_gain = cluster.size
-                cluster.score = cluster.information_gain/cluster.path_cost
+                cluster.score = cluster.information_gain/max(cluster.path_cost, 1e-6)

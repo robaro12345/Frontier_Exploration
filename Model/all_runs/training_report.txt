@@ -1,0 +1,1556 @@
+Coverage = known cells / all cells in the latest received occupancy grid.
+Success = detector completion without an abort; not proof of full world coverage.
+Aborted/interrupted attempts count as failures; unfinished actions are not steps.
+Success-rate graph = cumulative successful episodes / recorded attempts.
+Combined attempt history; episode numbers include retries and failures.
+Sources in chronological order:
+/home/omkar/Downloads/Fronter/checkpoints/reports/20261009T080419Z_nocerjlm/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/recovered_startup_failure/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/recovered_interrupted_run/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/20261009T113811Z_z7yvg2fo/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/20261009T140324Z_jioiks6j/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/20261009T155711Z_k5u1c4qq/episodes.csv
+/home/omkar/Downloads/Fronter/checkpoints/reports/20261010T040519Z_r1crriq4/episodes.csv
+
+Episode: 1
+Cumulative Reward: 6.923023
+Steps: 14
+Coverage: 91.99%
+Success: True
+Epsilon: 0.932230
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 0
+
+Episode: 2
+Cumulative Reward: 60.058715
+Steps: 14
+Coverage: 72.76%
+Success: True
+Epsilon: 0.869053
+Navigation Successes: 14
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 1
+
+Episode: 3
+Cumulative Reward: 47.837198
+Steps: 13
+Coverage: 57.21%
+Success: True
+Epsilon: 0.814229
+Navigation Successes: 11
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 2
+
+Episode: 4
+Cumulative Reward: 28.609701
+Steps: 16
+Coverage: 49.50%
+Success: True
+Epsilon: 0.751477
+Navigation Successes: 15
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 3
+
+Episode: 5
+Cumulative Reward: 38.747677
+Steps: 15
+Coverage: 54.25%
+Success: True
+Epsilon: 0.697047
+Navigation Successes: 14
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 4
+
+Episode: 6
+Cumulative Reward: 4.134043
+Steps: 12
+Coverage: 51.37%
+Success: True
+Epsilon: 0.656355
+Navigation Successes: 12
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 5
+
+Episode: 7
+Cumulative Reward: 67.006875
+Steps: 13
+Coverage: 63.20%
+Success: True
+Epsilon: 0.614949
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 6
+
+Episode: 8
+Cumulative Reward: 78.497407
+Steps: 15
+Coverage: 49.45%
+Success: True
+Epsilon: 0.570407
+Navigation Successes: 14
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 7
+
+Episode: 9
+Cumulative Reward: 35.383785
+Steps: 13
+Coverage: 89.85%
+Success: True
+Epsilon: 0.534423
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 8
+
+Episode: 10
+Cumulative Reward: 124.404141
+Steps: 18
+Coverage: 83.01%
+Success: True
+Epsilon: 0.488316
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 9
+
+Episode: 11
+Cumulative Reward: 27.832274
+Steps: 13
+Coverage: 72.18%
+Success: True
+Epsilon: 0.457510
+Navigation Successes: 12
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 10
+
+Episode: 12
+Cumulative Reward: 80.971498
+Steps: 15
+Coverage: 49.81%
+Success: True
+Epsilon: 0.424372
+Navigation Successes: 14
+Outcome: completed
+Reason: No frontier clusters remain
+World: map01_open_obstacles.sdf
+Pose Index: 11
+
+Episode: 13
+Cumulative Reward: 32.950014
+Steps: 20
+Coverage: 51.38%
+Success: True
+Epsilon: 0.383891
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 0
+
+Episode: 14
+Cumulative Reward: 65.105420
+Steps: 17
+Coverage: 72.95%
+Success: True
+Epsilon: 0.352534
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 1
+
+Episode: 15
+Cumulative Reward: 137.408306
+Steps: 21
+Coverage: 49.78%
+Success: True
+Epsilon: 0.317311
+Navigation Successes: 21
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 2
+
+Episode: 16
+Cumulative Reward: 81.502100
+Steps: 22
+Coverage: 55.19%
+Success: True
+Epsilon: 0.284180
+Navigation Successes: 21
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 3
+
+Episode: 17
+Cumulative Reward: 65.936629
+Steps: 20
+Coverage: 73.46%
+Success: True
+Epsilon: 0.257072
+Navigation Successes: 20
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 4
+
+Episode: 18
+Cumulative Reward: 90.231956
+Steps: 22
+Coverage: 49.96%
+Success: True
+Epsilon: 0.230230
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 5
+
+Episode: 19
+Cumulative Reward: 57.508984
+Steps: 24
+Coverage: 51.90%
+Success: True
+Epsilon: 0.204135
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 6
+
+Episode: 20
+Cumulative Reward: 98.672262
+Steps: 21
+Coverage: 60.00%
+Success: True
+Epsilon: 0.183739
+Navigation Successes: 21
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 7
+
+Episode: 21
+Cumulative Reward: 59.560061
+Steps: 21
+Coverage: 74.40%
+Success: True
+Epsilon: 0.165381
+Navigation Successes: 21
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 8
+
+Episode: 22
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 0.99%
+Success: False
+Epsilon: 0.165381
+Navigation Successes: 0
+Outcome: aborted
+Reason: No exploration started; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0022_map02_corridor_loop_9.log
+World: map02_corridor_loop.sdf
+Pose Index: 9
+
+Episode: 23
+Cumulative Reward: -0.327222
+Steps: 2
+Coverage: 13.01%
+Success: False
+Epsilon: 0.163731
+Navigation Successes: 2
+Outcome: interrupted
+Reason: Training stopped before episode completion
+World: map02_corridor_loop.sdf
+Pose Index: 9
+
+Episode: 24
+Cumulative Reward: 123.649171
+Steps: 25
+Coverage: 52.25%
+Success: True
+Epsilon: 0.144447
+Navigation Successes: 25
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 9
+
+Episode: 25
+Cumulative Reward: 66.519716
+Steps: 23
+Coverage: 58.38%
+Success: True
+Epsilon: 0.128718
+Navigation Successes: 23
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 10
+
+Episode: 26
+Cumulative Reward: 152.274292
+Steps: 24
+Coverage: 49.87%
+Success: True
+Epsilon: 0.114128
+Navigation Successes: 24
+Outcome: completed
+Reason: No frontier clusters remain
+World: map02_corridor_loop.sdf
+Pose Index: 11
+
+Episode: 27
+Cumulative Reward: 20.570939
+Steps: 20
+Coverage: 57.86%
+Success: True
+Epsilon: 0.103242
+Navigation Successes: 20
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 0
+
+Episode: 28
+Cumulative Reward: 106.595719
+Steps: 23
+Coverage: 51.83%
+Success: True
+Epsilon: 0.092000
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 1
+
+Episode: 29
+Cumulative Reward: 62.676954
+Steps: 18
+Coverage: 41.98%
+Success: False
+Epsilon: 0.084062
+Navigation Successes: 17
+Outcome: aborted
+Reason: Episode exceeded wall-time limit; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0006_map03_four_rooms_2.log
+World: map03_four_rooms.sdf
+Pose Index: 2
+
+Episode: 30
+Cumulative Reward: 91.007562
+Steps: 19
+Coverage: 59.76%
+Success: True
+Epsilon: 0.076426
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 3
+
+Episode: 31
+Cumulative Reward: 54.941312
+Steps: 19
+Coverage: 55.50%
+Success: True
+Epsilon: 0.069483
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 4
+
+Episode: 32
+Cumulative Reward: 41.178859
+Steps: 22
+Coverage: 61.52%
+Success: True
+Epsilon: 0.062228
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 5
+
+Episode: 33
+Cumulative Reward: 67.691616
+Steps: 18
+Coverage: 58.56%
+Success: True
+Epsilon: 0.056859
+Navigation Successes: 18
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 6
+
+Episode: 34
+Cumulative Reward: 93.139084
+Steps: 19
+Coverage: 74.64%
+Success: True
+Epsilon: 0.051694
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 7
+
+Episode: 35
+Cumulative Reward: 127.348420
+Steps: 19
+Coverage: 50.09%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 18
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 8
+
+Episode: 36
+Cumulative Reward: 175.765117
+Steps: 24
+Coverage: 58.69%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 24
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 9
+
+Episode: 37
+Cumulative Reward: 129.963033
+Steps: 20
+Coverage: 62.27%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 20
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 10
+
+Episode: 38
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 0.71%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 0
+Outcome: aborted
+Reason: No exploration started; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0009_map03_four_rooms_11.log
+World: map03_four_rooms.sdf
+Pose Index: 11
+
+Episode: 39
+Cumulative Reward: 39.723559
+Steps: 19
+Coverage: 49.72%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 18
+Outcome: completed
+Reason: No frontier clusters remain
+World: map03_four_rooms.sdf
+Pose Index: 11
+
+Episode: 40
+Cumulative Reward: 86.696609
+Steps: 35
+Coverage: 54.61%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 0
+
+Episode: 41
+Cumulative Reward: 75.416456
+Steps: 35
+Coverage: 50.68%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 1
+
+Episode: 42
+Cumulative Reward: 66.676749
+Steps: 37
+Coverage: 54.75%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 2
+
+Episode: 43
+Cumulative Reward: 29.661164
+Steps: 34
+Coverage: 52.98%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 34
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 3
+
+Episode: 44
+Cumulative Reward: 117.219054
+Steps: 35
+Coverage: 55.24%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 4
+
+Episode: 45
+Cumulative Reward: 103.685100
+Steps: 34
+Coverage: 49.65%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 33
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 5
+
+Episode: 46
+Cumulative Reward: 66.098971
+Steps: 31
+Coverage: 54.91%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 31
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 6
+
+Episode: 47
+Cumulative Reward: 92.078573
+Steps: 35
+Coverage: 64.37%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 7
+
+Episode: 48
+Cumulative Reward: 67.595104
+Steps: 33
+Coverage: 72.55%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 28
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 8
+
+Episode: 49
+Cumulative Reward: 130.439452
+Steps: 35
+Coverage: 89.36%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 9
+
+Episode: 50
+Cumulative Reward: 88.278854
+Steps: 34
+Coverage: 54.14%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 34
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 10
+
+Episode: 51
+Cumulative Reward: 131.460452
+Steps: 34
+Coverage: 77.16%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 32
+Outcome: completed
+Reason: No frontier clusters remain
+World: map04_maze.sdf
+Pose Index: 11
+
+Episode: 52
+Cumulative Reward: 38.198043
+Steps: 11
+Coverage: 52.59%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 11
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 0
+
+Episode: 53
+Cumulative Reward: 115.524190
+Steps: 13
+Coverage: 47.32%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 1
+
+Episode: 54
+Cumulative Reward: 17.213498
+Steps: 13
+Coverage: 48.95%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 2
+
+Episode: 55
+Cumulative Reward: 3.434967
+Steps: 9
+Coverage: 59.90%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 9
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 3
+
+Episode: 56
+Cumulative Reward: 112.684154
+Steps: 9
+Coverage: 41.48%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 9
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map05_l_shaped.sdf
+Pose Index: 4
+
+Episode: 57
+Cumulative Reward: 160.078321
+Steps: 15
+Coverage: 47.56%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 15
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 5
+
+Episode: 58
+Cumulative Reward: -5.362932
+Steps: 13
+Coverage: 70.41%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 6
+
+Episode: 59
+Cumulative Reward: 89.234954
+Steps: 15
+Coverage: 66.18%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 15
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 7
+
+Episode: 60
+Cumulative Reward: 20.293494
+Steps: 21
+Coverage: 57.86%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 21
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 8
+
+Episode: 61
+Cumulative Reward: 54.652341
+Steps: 13
+Coverage: 58.54%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 9
+
+Episode: 62
+Cumulative Reward: 101.507780
+Steps: 16
+Coverage: 47.25%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 10
+
+Episode: 63
+Cumulative Reward: 102.465960
+Steps: 13
+Coverage: 54.24%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 13
+Outcome: completed
+Reason: No frontier clusters remain
+World: map05_l_shaped.sdf
+Pose Index: 11
+
+Episode: 64
+Cumulative Reward: 110.259708
+Steps: 40
+Coverage: 62.34%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 40
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 0
+
+Episode: 65
+Cumulative Reward: 116.277401
+Steps: 41
+Coverage: 43.84%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 41
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 1
+
+Episode: 66
+Cumulative Reward: 96.663509
+Steps: 41
+Coverage: 72.59%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 41
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 2
+
+Episode: 67
+Cumulative Reward: 132.323310
+Steps: 36
+Coverage: 47.26%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 34
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map06_warehouse.sdf
+Pose Index: 3
+
+Episode: 68
+Cumulative Reward: 115.259204
+Steps: 30
+Coverage: 71.77%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 29
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map06_warehouse.sdf
+Pose Index: 4
+
+Episode: 69
+Cumulative Reward: 31.879293
+Steps: 38
+Coverage: 42.77%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 37
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map06_warehouse.sdf
+Pose Index: 5
+
+Episode: 70
+Cumulative Reward: 102.501559
+Steps: 36
+Coverage: 63.36%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 34
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 6
+
+Episode: 71
+Cumulative Reward: 89.599753
+Steps: 37
+Coverage: 46.14%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 37
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map06_warehouse.sdf
+Pose Index: 7
+
+Episode: 72
+Cumulative Reward: 55.493787
+Steps: 37
+Coverage: 43.13%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 36
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 8
+
+Episode: 73
+Cumulative Reward: 128.680110
+Steps: 37
+Coverage: 64.69%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 9
+
+Episode: 74
+Cumulative Reward: 65.924052
+Steps: 29
+Coverage: 63.50%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 29
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 10
+
+Episode: 75
+Cumulative Reward: 23.730288
+Steps: 29
+Coverage: 46.67%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 28
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map06_warehouse.sdf
+Pose Index: 11
+
+Episode: 76
+Cumulative Reward: 162.639589
+Steps: 37
+Coverage: 46.94%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 36
+Outcome: completed
+Reason: No frontier clusters remain
+World: map06_warehouse.sdf
+Pose Index: 11
+
+Episode: 77
+Cumulative Reward: 191.659107
+Steps: 40
+Coverage: 92.93%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 38
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 0
+
+Episode: 78
+Cumulative Reward: 198.059358
+Steps: 31
+Coverage: 53.08%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 31
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 1
+
+Episode: 79
+Cumulative Reward: 186.292826
+Steps: 32
+Coverage: 52.13%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 32
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 2
+
+Episode: 80
+Cumulative Reward: 178.567481
+Steps: 30
+Coverage: 49.62%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 29
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 3
+
+Episode: 81
+Cumulative Reward: 190.166402
+Steps: 36
+Coverage: 54.34%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 4
+
+Episode: 82
+Cumulative Reward: 134.524104
+Steps: 28
+Coverage: 62.15%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 28
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 5
+
+Episode: 83
+Cumulative Reward: 154.327025
+Steps: 27
+Coverage: 85.45%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 27
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 6
+
+Episode: 84
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 5.12%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 0
+Outcome: aborted
+Reason: No exploration started; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0009_map07_office_7.log
+World: map07_office.sdf
+Pose Index: 7
+
+Episode: 85
+Cumulative Reward: 133.599858
+Steps: 80
+Coverage: 49.35%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 79
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 7
+
+Episode: 86
+Cumulative Reward: 175.922994
+Steps: 31
+Coverage: 57.41%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 30
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 8
+
+Episode: 87
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 2.98%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 0
+Outcome: aborted
+Reason: No exploration started; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0011_map07_office_9.log
+World: map07_office.sdf
+Pose Index: 9
+
+Episode: 88
+Cumulative Reward: 169.188817
+Steps: 30
+Coverage: 70.44%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 29
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 9
+
+Episode: 89
+Cumulative Reward: 183.458785
+Steps: 33
+Coverage: 70.25%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 32
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 10
+
+Episode: 90
+Cumulative Reward: 141.950288
+Steps: 32
+Coverage: 68.01%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 31
+Outcome: completed
+Reason: No frontier clusters remain
+World: map07_office.sdf
+Pose Index: 11
+
+Episode: 91
+Cumulative Reward: 176.770314
+Steps: 19
+Coverage: 55.53%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 17
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 0
+
+Episode: 92
+Cumulative Reward: 189.796354
+Steps: 16
+Coverage: 49.84%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 1
+
+Episode: 93
+Cumulative Reward: 186.330863
+Steps: 18
+Coverage: 49.27%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 18
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 2
+
+Episode: 94
+Cumulative Reward: 174.034112
+Steps: 20
+Coverage: 51.59%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 3
+
+Episode: 95
+Cumulative Reward: 134.414713
+Steps: 21
+Coverage: 55.82%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 20
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 4
+
+Episode: 96
+Cumulative Reward: 149.461488
+Steps: 19
+Coverage: 64.71%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 18
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 5
+
+Episode: 97
+Cumulative Reward: 212.773177
+Steps: 18
+Coverage: 49.60%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 14
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 6
+
+Episode: 98
+Cumulative Reward: 186.591343
+Steps: 17
+Coverage: 64.42%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 17
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 7
+
+Episode: 99
+Cumulative Reward: 174.102675
+Steps: 16
+Coverage: 56.09%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 8
+
+Episode: 100
+Cumulative Reward: 168.116789
+Steps: 21
+Coverage: 55.03%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 9
+
+Episode: 101
+Cumulative Reward: 167.565212
+Steps: 19
+Coverage: 49.93%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 17
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 10
+
+Episode: 102
+Cumulative Reward: 161.901506
+Steps: 16
+Coverage: 58.82%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: completed
+Reason: No frontier clusters remain
+World: map08_cluttered.sdf
+Pose Index: 11
+
+Episode: 103
+Cumulative Reward: 158.255980
+Steps: 25
+Coverage: 71.25%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 24
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 0
+
+Episode: 104
+Cumulative Reward: 177.722540
+Steps: 35
+Coverage: 59.88%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 29
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 1
+
+Episode: 105
+Cumulative Reward: 214.088776
+Steps: 37
+Coverage: 49.46%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 36
+Outcome: completed
+Reason: No frontier clusters remain
+World: map09_spiral.sdf
+Pose Index: 2
+
+Episode: 106
+Cumulative Reward: 167.839008
+Steps: 23
+Coverage: 49.16%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 20
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 3
+
+Episode: 107
+Cumulative Reward: 104.343785
+Steps: 16
+Coverage: 60.08%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 16
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 4
+
+Episode: 108
+Cumulative Reward: 187.360364
+Steps: 33
+Coverage: 50.65%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 32
+Outcome: completed
+Reason: No frontier clusters remain
+World: map09_spiral.sdf
+Pose Index: 5
+
+Episode: 109
+Cumulative Reward: 107.480318
+Steps: 15
+Coverage: 47.31%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 15
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 6
+
+Episode: 110
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 3.03%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 0
+Outcome: aborted
+Reason: No exploration started; see /home/omkar/Downloads/Fronter/checkpoints/episodes/0033_map09_spiral_7.log
+World: map09_spiral.sdf
+Pose Index: 7
+
+Episode: 111
+Cumulative Reward: 210.288617
+Steps: 36
+Coverage: 54.27%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 36
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 7
+
+Episode: 112
+Cumulative Reward: 215.870422
+Steps: 36
+Coverage: 96.59%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 35
+Outcome: completed
+Reason: No frontier clusters remain
+World: map09_spiral.sdf
+Pose Index: 8
+
+Episode: 113
+Cumulative Reward: 197.191181
+Steps: 34
+Coverage: 90.80%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 33
+Outcome: completed
+Reason: No frontier clusters remain
+World: map09_spiral.sdf
+Pose Index: 9
+
+Episode: 114
+Cumulative Reward: 149.227308
+Steps: 26
+Coverage: 83.62%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 24
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 10
+
+Episode: 115
+Cumulative Reward: 132.767235
+Steps: 22
+Coverage: 37.37%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 20
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map09_spiral.sdf
+Pose Index: 11
+
+Episode: 116
+Cumulative Reward: 142.738798
+Steps: 15
+Coverage: 44.18%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 15
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 0
+
+Episode: 117
+Cumulative Reward: 137.551591
+Steps: 19
+Coverage: 73.01%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 17
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 1
+
+Episode: 118
+Cumulative Reward: 0.000000
+Steps: 0
+Coverage: 0.75%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 0
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map10_cave.sdf
+Pose Index: 2
+
+Episode: 119
+Cumulative Reward: 160.050507
+Steps: 20
+Coverage: 65.09%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 2
+
+Episode: 120
+Cumulative Reward: 156.961970
+Steps: 13
+Coverage: 42.24%
+Success: False
+Epsilon: 0.050000
+Navigation Successes: 11
+Outcome: aborted
+Reason: No reachable frontier paths before unreachable_timeout
+World: map10_cave.sdf
+Pose Index: 3
+
+Episode: 121
+Cumulative Reward: 149.141891
+Steps: 23
+Coverage: 48.21%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 4
+
+Episode: 122
+Cumulative Reward: 164.671578
+Steps: 22
+Coverage: 43.89%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 5
+
+Episode: 123
+Cumulative Reward: 162.540394
+Steps: 19
+Coverage: 46.00%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 19
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 6
+
+Episode: 124
+Cumulative Reward: 117.947603
+Steps: 23
+Coverage: 43.76%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 7
+
+Episode: 125
+Cumulative Reward: 156.516819
+Steps: 23
+Coverage: 43.82%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 23
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 8
+
+Episode: 126
+Cumulative Reward: 172.179152
+Steps: 23
+Coverage: 84.22%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 22
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 9
+
+Episode: 127
+Cumulative Reward: 135.106081
+Steps: 28
+Coverage: 70.44%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 28
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 10
+
+Episode: 128
+Cumulative Reward: 122.801318
+Steps: 24
+Coverage: 46.48%
+Success: True
+Epsilon: 0.050000
+Navigation Successes: 23
+Outcome: completed
+Reason: No frontier clusters remain
+World: map10_cave.sdf
+Pose Index: 11
+
+Training Summary
+Total Episodes: 128
+Mean Episode Reward: 106.708452
+Success Rate: 82.03%
+Mean Steps per Episode: 23.078125
+Final Epsilon: 0.050000

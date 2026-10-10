@@ -212,3 +212,8 @@ Fronter/
 ## Demo
 
 📺 **Demo Video:** https://youtu.be/ddI4ZkuZApE
+
+## Optional DQN add-on
+
+See [RL setup, training, deployment and validation](src/fronter_exploration/RL.md).
+Heuristic exploration remains the default (`rl:=false`).
